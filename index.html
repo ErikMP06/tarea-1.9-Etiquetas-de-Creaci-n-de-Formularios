@@ -9,7 +9,7 @@
 <body>
 
     <!-- form: define un formulario para la recogida de datos; action: URL donde se envían los datos; method: método HTTP (GET o POST) para enviar los datos -->
-    <form action="index.html" method="post">
+    <form action="index.html" method="get">
         
         <!-- fieldset: agrupa elementos relacionados en un formulario; legend: título o leyenda descriptiva para el fieldset -->
         <fieldset>
@@ -163,18 +163,13 @@
 
     <!-- h2: define un encabezado de sección de nivel 2 -->
     <!-- p: define un párrafo de texto -->
-    <h2>Reflexión GET</h2>
-    <p><strong>1. ¿Qué ocurre cuando envías el formulario de inscripción con el método GET? ¿Dónde se ven los datos?</strong><br>
-    Los datos introducidos en los campos del formulario se envían y se pueden ver directamente en la barra de direcciones del navegador (URL) adjuntos después del signo de interrogación (?), estructurados en pares de clave-valor (por ejemplo, <code>?nombre=Erik&amp;correo=...</code>).</p>
-    <p><strong>2. ¿Qué pasa si modificas manualmente un parámetro en la URL (por ejemplo, cambiar <code>search=</code> por <code>buscar=</code> en el de Wikipedia)?</strong><br>
-    El servidor web de la Wikipedia no reconoce el nuevo parámetro <code>buscar=</code> porque espera estrictamente el parámetro <code>search=</code>, por lo que la búsqueda no se realiza correctamente o se ignoran los términos introducidos.</p>
-
+ <h2>Reflexión GET</h2>
+    <p><strong>1. ¿Qué problema de seguridad descubres en el historial por haber enviado la inscripción con GET? ¿Qué método recomienda el artículo para un formulario como este y por qué?</strong><br>
+    Al mirar en el historial del navegador, veo que se queda guardada toda la URL completa con los datos que metí en el formulario (como correos, contraseñas o teléfonos) escritos tal cual en texto plano. El problema es que cualquiera que coja el ordenador puede ver esa información privada ahí metida. Por eso el artículo recomienda usar el método POST para formularios de este tipo, ya que oculta los datos dentro del cuerpo de la petición y evita que se queden a la vista en la barra de direcciones o en el historial.</p>
 
     <h2>Reflexión POST</h2>
-    <p><strong>1. ¿En qué se diferencia el método POST del método GET respecto a la visibilidad de los datos en la URL?</strong><br>
-    A diferencia de GET (que muestra los datos de forma visible en la barra de direcciones), el método POST envía los datos de manera oculta al servidor dentro del cuerpo (body) de la petición HTTP, lo que lo hace mucho más seguro para información sensible como contraseñas o datos personales.</p>
-    <p><strong>2. ¿Por qué se utiliza GET para buscadores (como Wikipedia u OpenStreetMap) y POST para enviar información privada o modificaciones de datos?</strong><br>
-    GET se usa en buscadores porque permite que la URL sea compartible, reproducible y almacenable en marcadores. En cambio, POST se utiliza para enviar información privada (como credenciales) o cuando se realizan acciones que modifican el estado en el servidor, evitando que los datos queden expuestos en el historial o en la barra de direcciones.</p>
-    
+    <p><strong>1. ¿Qué ocurre al enviar la inscripción con POST? Según el artículo, ¿qué tendría que haber en el servidor para procesar esos datos?</strong><br>
+    Cuando cambias el formulario a POST y lo envías en GitHub Pages, la página da un error (el típico error 405 de método no permitido) y no hace nada. Esto pasa porque GitHub Pages solo sirve páginas estáticas y no procesa código. Según el artículo, para que el servidor pudiera manejar esos datos enviados por POST haría falta un lenguaje de programación backend (como PHP, Python o Node.js) que se encargue de recibir la petición, leer los datos y procesarlos.</p>
+
 </body>
 </html>
