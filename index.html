@@ -30,6 +30,22 @@
             <!-- tel: tipo de input para números de teléfono; pattern: expresión regular que debe cumplir el valor -->
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+
+            <!-- date: tipo de input para seleccionar una fecha (año, mes y día) -->
+            <label for="fnacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fnacimiento" name="fnacimiento">
+
+            <!-- file: tipo de input para adjuntar archivos desde el dispositivo -->
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto">
+
+            <!-- readonly: hace que el campo sea de solo lectura (no editable, pero se envía) -->
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" name="curso" value="2026-27" readonly>
+
+            <!-- disabled: desactiva el campo por completo (no se puede editar ni se envía al servidor) -->
+            <label for="centro">Centro:</label>
+            <input type="text" id="centro" name="centro" value="IES La Asunción" disabled>
         </fieldset>
     </form>
 
