@@ -9,7 +9,7 @@
 <body>
 
     <!-- form: define un formulario para la recogida de datos; action: URL donde se envían los datos; method: método HTTP (GET o POST) para enviar los datos -->
-    <form action="index.html" method="get">
+    <form action="index.html" method="post">
         
         <!-- fieldset: agrupa elementos relacionados en un formulario; legend: título o leyenda descriptiva para el fieldset -->
         <fieldset>
@@ -169,5 +169,12 @@
     <p><strong>2. ¿Qué pasa si modificas manualmente un parámetro en la URL (por ejemplo, cambiar <code>search=</code> por <code>buscar=</code> en el de Wikipedia)?</strong><br>
     El servidor web de la Wikipedia no reconoce el nuevo parámetro <code>buscar=</code> porque espera estrictamente el parámetro <code>search=</code>, por lo que la búsqueda no se realiza correctamente o se ignoran los términos introducidos.</p>
 
+
+    <h2>Reflexión POST</h2>
+    <p><strong>1. ¿En qué se diferencia el método POST del método GET respecto a la visibilidad de los datos en la URL?</strong><br>
+    A diferencia de GET (que muestra los datos de forma visible en la barra de direcciones), el método POST envía los datos de manera oculta al servidor dentro del cuerpo (body) de la petición HTTP, lo que lo hace mucho más seguro para información sensible como contraseñas o datos personales.</p>
+    <p><strong>2. ¿Por qué se utiliza GET para buscadores (como Wikipedia u OpenStreetMap) y POST para enviar información privada o modificaciones de datos?</strong><br>
+    GET se usa en buscadores porque permite que la URL sea compartible, reproducible y almacenable en marcadores. En cambio, POST se utiliza para enviar información privada (como credenciales) o cuando se realizan acciones que modifican el estado en el servidor, evitando que los datos queden expuestos en el historial o en la barra de direcciones.</p>
+    
 </body>
 </html>
