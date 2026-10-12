@@ -14,6 +14,22 @@
         <fieldset>
             <!-- label: etiqueta descriptiva para un control; for: vincula la etiqueta con el id del control -->
             <legend>Datos personales by Erik</legend>
+
+            <!-- text: tipo de input para una línea de texto libre; placeholder: texto de ayuda dentro del campo; required: indica que el campo es obligatorio; autofocus: enfoca el campo al cargar; size: ancho visible en caracteres; maxlength: número máximo de caracteres permitidos -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required autofocus size="30" maxlength="40">
+
+            <!-- password: tipo de input para contraseñas (oculta los caracteres); minlength: número mínimo de caracteres permitidos -->
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" minlength="8">
+
+            <!-- email: tipo de input optimizado para correos electrónicos con validación automática -->
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <!-- tel: tipo de input para números de teléfono; pattern: expresión regular que debe cumplir el valor -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
         </fieldset>
     </form>
 
