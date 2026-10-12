@@ -85,6 +85,24 @@
             <!-- month: tipo de input para seleccionar un mes y un año -->
             <label for="mes">Mes:</label>
             <input type="month" id="mes" name="mes">
+
+            <!-- select: crea un menú desplegable de opciones; multiple: permite seleccionar múltiples opciones a la vez -->
+            <!-- optgroup: agrupa opciones en un select; label: título descriptivo del grupo -->
+            <!-- option: define una opción dentro de un select; value: valor enviado; selected: marca la opción seleccionada por defecto -->
+            <!-- textarea: campo de texto multilínea; rows: número de filas visibles; cols: número de columnas o ancho visible -->
+            <label for="modulos">Módulos:</label>
+            <select id="modulos" name="modulos" multiple>
+                <optgroup label="Primero">
+                    <option value="fol" selected>FOL</option>
+                    <option value="si">SI</option>
+                </optgroup>
+                <optgroup label="Segundo">
+                    <option value="ei">EI</option>
+                </optgroup>
+            </select>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="30"></textarea>
         </fieldset>
     </form>
 
