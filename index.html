@@ -47,6 +47,21 @@
             <label for="centro">Centro:</label>
             <input type="text" id="centro" name="centro" value="IES La Asunción" disabled>
         </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+
+            <!-- radio: tipo de input de opción exclusiva; comparte el mismo name para permitir seleccionar solo una opción del grupo; value: valor que se envía si se selecciona -->
+            <label>Turno:</label>
+            <label><input type="radio" name="turno" value="maana"> Mañana</label>
+            <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+
+            <!-- checkbox: tipo de input de casilla de verificación independiente; permite marcar varias opciones con el mismo name -->
+            <label>Intereses:</label>
+            <label><input type="checkbox" name="intereses" value="programacion"> Programación</label>
+            <label><input type="checkbox" name="intereses" value="diseno"> Diseño</label>
+            <label><input type="checkbox" name="intereses" value="redes"> Redes</label>
+        </fieldset>
     </form>
 
 </body>
