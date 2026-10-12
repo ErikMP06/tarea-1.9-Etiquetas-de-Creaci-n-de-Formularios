@@ -120,5 +120,19 @@
         <button type="button">Button Genérico</button>
     </form>
 
+    <!-- search: tipo de input optimizado para campos de búsqueda -->
+    <!-- list: asocia un input con el id de un datalist de opciones sugeridas -->
+    <!-- datalist: contiene un conjunto de elementos option que proporcionan sugerencias automáticas a un input -->
+    <form action="https://es.wikipedia.org/w/index.php" method="get">
+        <label for="busqueda-wiki">Buscar en Wikipedia:</label>
+        <input type="search" id="busqueda-wiki" name="search" list="sugerencias-wiki">
+        <datalist id="sugerencias-wiki">
+            <option value="Formulario web">
+            <option value="HTML">
+            <option value="Protocolo de transferencia de hipertexto">
+        </datalist>
+        <input type="submit" value="Buscar en Wikipedia">
+    </form>
+
 </body>
 </html>
